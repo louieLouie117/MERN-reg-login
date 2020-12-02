@@ -1,0 +1,68 @@
+.App {
+  display: grid;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.regLogin-container img{
+  justify-self: center;
+  margin-bottom: 40px;
+}
+
+
+.regLogin-container{
+  display: grid;
+  display: grid;
+  max-width: 65em;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.mainNav-container{
+  justify-self: center;
+
+}
+
+.mainNav-container nav{
+  border-radius:  20px 20px 0 0;
+  text-decoration: none;
+  background: white;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 400px;
+  justify-items: center;
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.137);
+  
+
+}
+
+
+.mainNav-container nav a{
+  text-decoration: none;
+  color: blue;
+  font: 1.2em sans-serif;
+}
+
+.reg-container{
+  display: grid;
+  background: white;
+  width: 400px;
+  padding: 10px;
+  margin: 0 auto;
+  min-height: 300px;
+  border-radius:  0 0 20px 20px ;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.137);
+}
+
+.reg-container form{
+  display: grid;
+  row-gap: 5px;
+  padding: 0 40px;
+  align-self: start;
+}
+
+.reg-container form input {
+  padding: 7px;
+  height: 20px;
+}
