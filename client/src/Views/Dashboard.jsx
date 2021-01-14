@@ -5,7 +5,6 @@ import axios from "axios";
 
 const Dashboard = () => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
 
     const logout = () => {
       axios
@@ -19,7 +18,6 @@ const Dashboard = () => {
         )
         .then((res) => {
           console.log(res);
-        //   setIsLoggedIn(true);
         })
         .catch(console.log);
   
@@ -48,9 +46,9 @@ const Dashboard = () => {
           console.log(res);
         })
         .catch((err) => {
-          console.log("not authorized");
+          console.log("Not Authorized!!!");
           console.log(err.response);
-  
+        // not authorized redirect to homepage
           navigate("/");
         });
     }, []);
@@ -59,7 +57,7 @@ const Dashboard = () => {
 
     return (
 <div className="container">
-{isLoggedIn && <button onClick={logout}>Logout</button>}
+{ <button onClick={logout}>Logout</button>}
 
       <h3>All Users:</h3>
       <button onClick={getLoggedInUser}>Get Logged In User</button>

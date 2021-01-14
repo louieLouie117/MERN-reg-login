@@ -8,7 +8,7 @@ module.exports = {
       process.env.JWT_SECRET,
       (err, payload) => {
         if (err) {
-          res.status(401).json({ verified: false });
+          res.status(401).json({ verified: false, msg: "Access Denied. You do not have credentials!" });
         } else {
           next();
         }
