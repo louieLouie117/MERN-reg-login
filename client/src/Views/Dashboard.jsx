@@ -54,7 +54,6 @@ const Dashboard = () => {
     }, []);
 
 
-
     return (
 <div className="container">
 { <button onClick={logout}>Logout</button>}
