@@ -74,10 +74,10 @@ npm install cookie-parser
 
 # Progress log
 
-## December 02, 2020
+### December 02, 2020
 
 #### Initial commit
 
-## Thursday, January 14 2021
+### Thursday, January 14 2021
 
 #### This morning I finally got a chance to work on the registration and login, and at 9:31 am, I was able to get the backend and frontend to communicate successfully. With MERN, the approach is different. In C# ASP. NET authentication is handled with a session and a conditional statement that checks whether the user is authorized to view a page. With MERN, you use cookies and check to see if a user is authorized to view specific data. I was glad that I started this repo back in December because it was in the back of my mind while working on my portfolio. Since I have completed my portfolio, I had the change come back to this project. I had left this part out until the end because I was unsure if I could implement login and registration. Now that the login and registration are complete, I can implement all this knowledge into my portfolio. 
