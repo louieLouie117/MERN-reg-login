@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# MERN-LoginReg
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+by Luis Cardona
 
-## Available Scripts
+# Acknowledgment
+I would like to thank all of the amazing instructors and [Coding Dojo](https://www.codingdojo.com/) for teaching me the skills needed to become a self-sufficient developer. 
 
-In the project directory, you can run:
+# Documentation
 
-### `npm start`
+[React app](https://reactjs.org/docs/create-a-new-react-app.html)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[axios](https://www.npmjs.com/package/react-axios)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[@reach/router](https://www.npmjs.com/package/@reach/router)
 
-### `npm test`
+[npm init -y](https://docs.npmjs.com/cli/v6/commands/npm-init)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[mongodb](https://www.npmjs.com/package/mongodb)
 
-### `npm run build`
+[express](https://www.npmjs.com/package/express)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[cors](https://www.npmjs.com/package/cors)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[dotenv](https://www.npmjs.com/package/dotenv)
 
-### `npm run eject`
+[cookie-parser](https://www.npmjs.com/package/cookie-parser)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[postman](https://www.postman.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Frontend
+```bash
+npx create-react-app client
+````
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm install axios
+````
 
-## Learn More
+```bash
+npm install @reach/router
+````
+## Backend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm init -y
+````
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install mongoose
+````
 
-### Code Splitting
+```bash
+npm install express
+````
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install cors
+````
 
-### Analyzing the Bundle Size
+```bash
+ npm install jsonwebtoken
+````
+````bash
+ npm install dotenv
+````
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+````bash
+npm install cookie-parser
+````
 
-### Making a Progressive Web App
+# Progress log
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## December 02, 2020
 
-### Advanced Configuration
+#### Initial commit
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Thursday, January 14 2021
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### This morning I finally got a chance to work on the registration and login, and at 9:31 am, I was able to get the backend and frontend to communicate successfully. With MERN, the approach is different. In C# ASP. NET authentication is handled with a session and a conditional statement that checks whether the user is authorized to view a page. With MERN, you use cookies and check to see if a user is authorized to view specific data. I was glad that I started this repo back in December because it was in the back of my mind while working on my portfolio. Since I have completed my portfolio, I had the change come back to this project. I had left this part out until the end because I was unsure if I could implement login and registration. Now that the login and registration are complete, I can implement all this knowledge into my portfolio. 

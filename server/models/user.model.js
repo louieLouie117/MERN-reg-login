@@ -15,15 +15,12 @@ const UserSchema = new mongoose.Schema(
             type:String,
             required: [true, "{PATH} is required"],
             minlength: [2, "{PATH} must be at least {MINLENGTH}"],
-            validate: {
-              validator: val => /^([\w-\.]+@([\w-]+\.)+[\w-]+)?$/.test(val),
-              message: "Please enter a valid email"
-            }
+            
         },
 
         password:{
             type:String,
-            required: [true, "{PATH} is required"],
+            // required: [true, "{PATH} is required"],
             minlength: [2, "{PATH} must be at least {MINLENGTH}"],
             
         },
