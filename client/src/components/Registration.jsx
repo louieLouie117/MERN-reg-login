@@ -25,8 +25,12 @@ const Registration = props => {
 
         console.log(newUser);
 
-        axios.post("http://localhost:8000/api/user", newUser)
+        axios.post("http://localhost:8000/api/register", newUser, {
+        withCredentials: true,
+
+        })
         .then((res)=>{
+            
             console.log(res);
         })
         .catch((err)=>{
