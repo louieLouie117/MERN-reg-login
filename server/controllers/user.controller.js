@@ -6,23 +6,17 @@ const jwt = require("jsonwebtoken");
 module.exports = {
   register(req, res) {
 
-        User.find()
+    User.findOne({ email: req.body.email })
     .then((users) => {
         // res.json(users)
-
-     const { email } = req.body;
-    // // User.findOne({email: email})
-    for (let i = 0; i < users.length; i++) {
-        console.log("email in db", users[i].email);
-
-    if(users[i].email === email){
-        console.log("*******************");
-         console.log("This email",users[i].email, "was found in the db");
-         console.log("Registration Denied!!! email already exists");
-         return res.status(422).json({ errors: [{ user: "Registration Denied!!!" }] });
-      }
-      
-    }
+       if(users){
+           console.log("*******************");
+            console.log("This user",users, "was found in the db");
+            console.log("Registration Denied!!! email already exists");
+            return res.status(422).json({ errors: [{ user: "Registration Denied!!!" }] });
+         }
+         
+    
         const user = new User(req.body);
              user
             .save()
