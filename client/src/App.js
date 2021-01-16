@@ -27,7 +27,7 @@ function App() {
         {/* {<button onClick={logout}>Logout</button>} */}
 
       </div>
-      <RegLogin setLoggedIn={() => setIsLoggedIn(true)} path="/" />
+      <RegLogin  path="/" />
 
       <Router>
         <Dashboard path="/dashboard" />

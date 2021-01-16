@@ -5,14 +5,41 @@ const jwt = require("jsonwebtoken");
 // export an object that is full of methods
 module.exports = {
   register(req, res) {
-    const user = new User(req.body);
 
-    user
-      .save()
-      .then(() => {
-        res.json({ msg: "success!", user: user });
+        User.find()
+    .then((users) => {
+        // res.json(users)
+
+     const { email } = req.body;
+    // // User.findOne({email: email})
+    for (let i = 0; i < users.length; i++) {
+        console.log("email in db", users[i].email);
+
+    if(users[i].email === email){
+        console.log("*******************");
+         console.log("This email",users[i].email, "was found in the db");
+         console.log("Registration Denied!!! email already exists");
+         return res.status(422).json({ errors: [{ user: "Registration Denied!!!" }] });
+      }
+      
+    }
+        const user = new User(req.body);
+             user
+            .save()
+            .then(() => {
+            res.json({ msg: "success!", user: user });
+            console.log("Success!!!");
+   
+        
       })
+   
       .catch((err) => res.status(400).json(err));
+   
+
+
+    
+    })
+    .catch((err) => res.json(err));
   },
 
   login(req, res) {
