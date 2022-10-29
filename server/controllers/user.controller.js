@@ -52,6 +52,7 @@ module.exports = {
                     jwt.sign({ _id: user._id }, process.env.JWT_SECRET),
                     {
                       httpOnly: true,
+                      maxAge: 60000, // Session will time out.
                     }
                   )
                   .json({ msg: "success!" });

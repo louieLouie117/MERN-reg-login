@@ -5,7 +5,6 @@ import axios from "axios";
 
 const Dashboard = () => {
 
-
     const logout = () => {
       axios
         .post(
@@ -69,6 +68,7 @@ const Dashboard = () => {
           </tr>
           {users.map((user) => (
             <tr key={user._id}>
+              <td>{user._id}</td>
               <td>{user.username}</td>
               <td>{user.email}</td>
               <td>{user.createdAt}</td>

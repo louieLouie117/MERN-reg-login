@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from "axios"
+import {navigate} from "@reach/router"
+
 
 
 const Registration = props => {
@@ -30,8 +32,9 @@ const Registration = props => {
 
         })
         .then((res)=>{
-            
             console.log(res);
+          navigate("/dashboard");
+
         })
         .catch((err)=>{
             console.log(err);
