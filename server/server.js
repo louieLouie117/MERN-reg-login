@@ -1,7 +1,7 @@
 const port = 8000;
 // const cors = require("cors")
 // const express = require("express")
-const dbName = "todoList-db";
+const dbName = "loginReg-db";
 
 
 require("dotenv").config();
