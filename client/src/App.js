@@ -23,7 +23,7 @@ function App() {
 
 <>
       <div className="jumbotron">
-        <h1>MERN Login Reg</h1>
+        <h1>MERN Todo List</h1>
         {/* {<button onClick={logout}>Logout</button>} */}
 
       </div>

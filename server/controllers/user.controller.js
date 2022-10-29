@@ -40,7 +40,7 @@ module.exports = {
     User.findOne({ email: req.body.email })
       .then((user) => {
         if (user === null) {
-          res.status(400).json({ msg: "invalid login attempt" });
+          res.status(400).json({ msg: "invalid login attempt 1" });
         } else {
           bcrypt
             .compare(req.body.password, user.password)
@@ -57,11 +57,11 @@ module.exports = {
                   )
                   .json({ msg: "success!" });
               } else {
-                res.status(400).json({ msg: "invalid login attempt" });
+                res.status(400).json({ msg: "invalid login attempt 2" });
               }
             })
             .catch((err) =>
-              res.status(400).json({ msg: "invalid login attempt" })
+              res.status(400).json({ msg: "invalid login attempt 3" })
             );
         }
       })
