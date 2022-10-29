@@ -24,18 +24,45 @@ const Dashboard = () => {
     };
   
 
+
+    // const getLoggedInUser = () => {
+    //   axios
+    //     .get("http://localhost:8000/api/users/loggedin", {
+    //       withCredentials: true,
+    //     })
+    //     .then((res) => console.log(res))
+    //     .catch(console.log);
+    // };
+
+
+    const [userId, setUserId] = useState([]);
+    const [userName, setUserName] = useState([]);
+    const [userEmail, setUserEmail] = useState([]);
+
     const [users, setUsers] = useState([]);
 
-    const getLoggedInUser = () => {
-      axios
-        .get("http://localhost:8000/api/users/loggedin", {
-          withCredentials: true,
-        })
-        .then((res) => console.log(res))
-        .catch(console.log);
-    };
+    axios
+    .get("http://localhost:8000/api/users/loggedin", {
+      withCredentials: true,
+    })
+    .then((res) => {
+      console.log("user id", res.data._id);
+      console.log("user name", res.data.name);
+      console.log("user email", res.data.email);
+      setUserId( res.data._id);
+      setUserName( res.data.name);
+      setUserEmail( res.data.email);
+
+
+    })
+    .catch((err) => {
+      console.log("Get single user error!!!");
+      console.log(err.response);
+    // not authorized redirect to homepage
+  });
   
     useEffect(() => {
+    
       axios
         .get("http://localhost:8000/api/users", {
           withCredentials: true,
@@ -55,10 +82,14 @@ const Dashboard = () => {
 
     return (
 <div className="container">
+<h1>Profile</h1>
+  <h2>User id: {userId}</h2>
+  <h2>User Name: {userName}</h2>
+  <h2>User email: {userEmail}</h2>
+
 { <button onClick={logout}>Logout</button>}
 
       <h3>All Users:</h3>
-      <button onClick={getLoggedInUser}>Get Logged In User</button>
       <table>
         <tbody>
           <tr>
@@ -66,12 +97,12 @@ const Dashboard = () => {
             <th>Email</th>
             <th>Created On</th>
           </tr>
-          {users.map((user) => (
-            <tr key={user._id}>
-              <td>{user._id}</td>
-              <td>{user.username}</td>
-              <td>{user.email}</td>
-              <td>{user.createdAt}</td>
+          {users.map((users) => (
+            <tr key={users._id}>
+              <td>{users._id}</td>
+              <td>{users.username}</td>
+              <td>{users.email}</td>
+              <td>{users.createdAt}</td>
             </tr>
           ))}
         </tbody>
