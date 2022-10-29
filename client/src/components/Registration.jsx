@@ -33,7 +33,7 @@ const Registration = props => {
         })
         .then((res)=>{
             console.log(res);
-          navigate("/login");
+          navigate("/dashboard");
 
         })
         .catch((err)=>{

@@ -38,10 +38,9 @@ const Dashboard = () => {
     const [userId, setUserId] = useState([]);
     const [userName, setUserName] = useState([]);
     const [userEmail, setUserEmail] = useState([]);
+
     const [users, setUsers] = useState([]);
 
-    useEffect(() => {
-       
     axios
     .get("http://localhost:8000/api/users/loggedin", {
       withCredentials: true,
@@ -57,10 +56,12 @@ const Dashboard = () => {
 
     })
     .catch((err) => {
-        console.log("Get single user error!!!");
-        console.log(err.response);
-      // not authorized redirect to homepage
-    });
+      console.log("Get single user error!!!");
+      console.log(err.response);
+    // not authorized redirect to homepage
+  });
+  
+    useEffect(() => {
     
       axios
         .get("http://localhost:8000/api/users", {
@@ -76,7 +77,6 @@ const Dashboard = () => {
         // not authorized redirect to homepage
           navigate("/");
         });
-
     }, []);
 
 
